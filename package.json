@@ -1,0 +1,17 @@
+{
+  "name": "github-copilot-deployment-lambda-demo",
+  "version": "1.0.0",
+  "description": "A Node.js application for deploying AWS Lambda function",
+  "main": "src/handler.js",
+  "scripts": {
+    "test": "jest",
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.938.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "serverless": "^2.48.0"
+  }
+}

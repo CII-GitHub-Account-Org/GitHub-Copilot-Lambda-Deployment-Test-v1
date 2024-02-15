@@ -1,0 +1,10 @@
+service: github-copilot-deployment-lambda-demo
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+functions:
+  hello:
+    handler: handler.hello
