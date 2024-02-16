@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
     permissions:
       id-token: write # needed to interact with GitHub's OIDC Token endpoint.
-      contents: read # needed to checkout the repository's code.
+      contents: read 
 
     steps:
       - name: Checkout code
