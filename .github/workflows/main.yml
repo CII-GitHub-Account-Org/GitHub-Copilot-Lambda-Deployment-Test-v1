@@ -27,6 +27,9 @@ jobs:
           role-to-assume: arn:aws:iam::750344256621:role/CII-GitHub-Account-IAM-Role
           role-session-name: GitHubActions
           aws-region: us-east-1
+      - name: Sts GetCallerIdentity
+        run: |
+          aws sts get-caller-identity
 
       - name: Deploy to AWS Lambda
         run: npx serverless deploy
