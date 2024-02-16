@@ -1,7 +1,7 @@
 {
-  "name": "github-copilot-deployment-lambda-demo",
+  "name": "my-lambda-app",
   "version": "1.0.0",
-  "description": "A Node.js application for deploying AWS Lambda function",
+  "description": "AWS Lambda application",
   "main": "src/handler.js",
   "scripts": {
     "test": "jest",

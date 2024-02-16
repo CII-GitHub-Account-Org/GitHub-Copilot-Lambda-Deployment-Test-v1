@@ -1,11 +1,14 @@
 'use strict';
 
-module.exports.handler = async (event, context) => {
-  // Your code here
+module.exports.hello = async event => {
   return {
     statusCode: 200,
-    body: JSON.stringify({
-      message: 'Hello from Lambda!',
-    }),
+    body: JSON.stringify(
+      {
+        message: 'Hello from Lambda!',
+      },
+      null,
+      2
+    ),
   };
 };
