@@ -24,7 +24,7 @@ jobs:
       - name: Configure AWS credentials
         uses: fuller-inc/actions-aws-assume-role@v1
         with:
-          role-to-assume: arn:aws:iam::750344256621:oidc-provider/token.actions.githubusercontent.com
+          role-to-assume: arn:aws:iam::750344256621:role/CII-GitHub-Account-IAM-Role
           role-session-name: GitHubActions
           aws-region: us-east-1
 
