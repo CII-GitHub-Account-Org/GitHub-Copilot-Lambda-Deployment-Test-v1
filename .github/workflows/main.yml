@@ -28,8 +28,10 @@ jobs:
           role-duration-seconds: 900 # the ttl of the session, in seconds.
           aws-region: us-east-1 # use your region here.
       # You can now execute commands that use the credentials👇
-      - name: Serverless deploy
-        run: sls deploy --stage dev
+      # - name: Serverless deploy
+      #   run: sls deploy --stage dev
+      - name: Deploy to AWS Lambda
+        run: npx serverless deploy
 
 
       # - name: Configure AWS credentials
@@ -42,8 +44,7 @@ jobs:
       #   run: |
       #     aws sts get-caller-identity
 
-      # - name: Deploy to AWS Lambda
-      #   run: npx serverless deploy- name: configure aws credentials
+
 
 
 
