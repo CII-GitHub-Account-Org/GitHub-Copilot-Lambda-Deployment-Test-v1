@@ -9,8 +9,8 @@ jobs:
   deploy:
     runs-on: windows-latest
     permissions:
-      id-token: write # needed to interact with GitHub's OIDC Token endpoint.
-      contents: read # needed to checkout the repository.
+      id-token: write # Needed to authenticate with GitHub Packages
+      contents: read 
 
     steps:
       - name: Checkout code
@@ -25,7 +25,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::750344256621:role/CII-GitHub-Account-IAM-Role
-          role-duration-seconds: 900 # the ttl of the session, in seconds.
+          role-duration-seconds: 900 
           aws-region: us-east-1 # use your region here.
       # You can now execute commands that use the credentials👇
       # - name: Serverless deploy
