@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
-      contents: read # Needed to read the contents of the repository
+      contents: read 
 
     steps:
       - name: Checkout code
