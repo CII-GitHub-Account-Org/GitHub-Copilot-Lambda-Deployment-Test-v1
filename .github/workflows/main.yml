@@ -33,6 +33,7 @@ jobs:
         run: npx serverless deploy
 
   deploy_to_qa:
+    needs: deploy_to_development
     runs-on: windows-latest
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
@@ -59,6 +60,7 @@ jobs:
         run: npx serverless deploy
 
   deploy_to_uat:
+    needs: deploy_to_qa
     runs-on: windows-latest
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
@@ -85,6 +87,7 @@ jobs:
         run: npx serverless deploy
 
   deploy_to_production:
+    needs: deploy_to_uat
     runs-on: windows-latest
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
