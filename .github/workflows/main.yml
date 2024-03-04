@@ -20,7 +20,7 @@ jobs:
 
   Deploy_to_Development:
     needs: Unit_Test
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
       contents: read # Needed to read the contents of the repository
