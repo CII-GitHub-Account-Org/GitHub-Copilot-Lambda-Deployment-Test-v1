@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports.hello = async event => {
+  console.log('Hello from Lambda!');
   return {
     statusCode: 200,
     body: JSON.stringify(
@@ -10,5 +11,6 @@ module.exports.hello = async event => {
       null,
       2
     ),
+  
   };
 };
