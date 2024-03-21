@@ -22,7 +22,7 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_SECRET }}
       - name: Approve Unit-Test Deployment
-        uses: trstringer/manual-approval@v1.7.0
+        uses: trstringer/manual-approval@v1.7.0 # This action is not available in the free plan.
         with:
           approvers: MohanSGond
           secret: ${{ steps.generate_token.outputs.token }}
