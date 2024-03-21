@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.hello = async event => {
-  console.log('Hello from Lambda!');
+  console.log('Test lambda deplyment using github copilot!');
   return {
     statusCode: 200,
     body: JSON.stringify(
