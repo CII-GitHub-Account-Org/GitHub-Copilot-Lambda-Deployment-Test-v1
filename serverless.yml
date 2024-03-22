@@ -7,7 +7,7 @@ provider:
 
 functions:
   hello:
-    handler: src/index.hello
+    handler: src/index.hello # The handler is the file name (without the .js extension) and the exported function name
     events:
       - http:
           path: hello
