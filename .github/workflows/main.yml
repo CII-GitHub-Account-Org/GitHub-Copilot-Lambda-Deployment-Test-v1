@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: configure aws credentials
+      - name: configure aws credentials # This action is not available in the free plan.
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::750344256621:role/CII-GitHub-Account-IAM-Role

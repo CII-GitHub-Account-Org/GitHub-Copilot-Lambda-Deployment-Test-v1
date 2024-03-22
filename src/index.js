@@ -6,7 +6,7 @@ module.exports.hello = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Hello from Lambda!',
+        message: 'Test lambda deplyment using github copilot!',
       },
       null,
       2
