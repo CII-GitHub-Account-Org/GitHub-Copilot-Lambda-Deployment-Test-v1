@@ -35,7 +35,7 @@ jobs:
 
   Deploy_to_Development:
     needs: Unit_Test
-    runs-on: windows-latest
+    runs-on: windows-latest # This job runs on the same platform as the Build job
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
       contents: read # Needed to read the contents of the repository
@@ -43,8 +43,8 @@ jobs:
       name: development
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout code # This action is not available in the free plan.
+        uses: actions/checkout@v2 # This action is not available in the free plan.
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
