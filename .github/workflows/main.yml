@@ -13,25 +13,30 @@ jobs:
 
   Unit_Test:
     needs: Build # This job must run after the Build job
-    runs-on: ubuntu-latest # This job runs on the same platform as the Build job
+    runs-on: windows-latest
     steps:
-      - name: Generate token
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.APP_SECRET }}
-      - name: Approve Unit-Test Deployment
-        uses: trstringer/manual-approval@v1.7.0 # This action is not available in the free plan.
-        with:
-          approvers: MohanSGond
-          secret: ${{ steps.generate_token.outputs.token }}
-          issue-title: Approve Unit-Test Deployment
-          issue-body: |
-            Approved.
-            This e-mail and any files transmitted with it are for the sole use of the intended recipient(s) and may contain confidential and privileged information. If you are not the intended recipient(s), please reply to the sender and destroy all copies of the original message. Any unauthorized review, use, disclosure, dissemination, forwarding, printing or copying of this email, and/or any action taken in reliance on the contents of this e-mail is strictly prohibited and may be unlawful. Where permitted by applicable law, this e-mail and other e-mail communications sent to and from Cognizant e-mail addresses may be monitored.
       - name: Exit with success
         run: exit 0
+    # runs-on: ubuntu-latest # This job runs on the same platform as the Build job
+    # steps:
+    #   - name: Generate token
+    #     id: generate_token
+    #     uses: tibdex/github-app-token@v1
+    #     with:
+    #       app_id: ${{ secrets.APP_ID }}
+    #       private_key: ${{ secrets.APP_SECRET }}
+    #   - name: Approve Unit-Test Deployment
+    #     uses: trstringer/manual-approval@v1.7.0 # This action is not available in the free plan.
+    #     with:
+    #       approvers: MohanSGond
+    #       secret: ${{ steps.generate_token.outputs.token }}
+    #       issue-title: Approve Unit-Test Deployment
+    #       issue-body: |
+    #         Approved.
+    #         This e-mail and any files transmitted with it are for the sole use of the intended recipient(s) and may contain confidential and privileged information. If you are not the intended recipient(s), please reply to the sender and destroy all copies of the original message. Any unauthorized review, use, disclosure, dissemination, forwarding, printing or copying of this email, and/or any action taken in reliance on the contents of this e-mail is strictly prohibited and may be unlawful. Where permitted by applicable law, this e-mail and other e-mail communications sent to and from Cognizant e-mail addresses may be monitored.
+    #   - name: Exit with success
+    #     run: exit 0
+ 
 
   Deploy_to_Development:
     needs: Unit_Test
