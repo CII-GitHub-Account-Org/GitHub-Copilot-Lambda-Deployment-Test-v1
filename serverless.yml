@@ -2,7 +2,7 @@ service: github-copilot-deployment-lambda-demo
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs18.x # Node.js version to use for the Lambda function
   region: us-east-1 # AWS region where the Lambda function will be deployed
 
 functions:

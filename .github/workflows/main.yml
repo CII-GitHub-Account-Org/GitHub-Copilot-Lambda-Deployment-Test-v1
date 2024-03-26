@@ -3,10 +3,10 @@ name: Deploy to AWS Lambda
 on:
   push:
     branches:
-      - main
+      - main # Only for the main branch
 jobs:
   Build:
-    runs-on: windows-latest
+    runs-on: windows-latest # This job runs on the same platform as the Unit_Test job
     steps:
       - name: Exit with success
         run: exit 0
@@ -50,10 +50,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js #
+      - name: Set up Node.js # This action sets up Node.js for the job
         uses: actions/setup-node@v2
         with:
-          node-version: 18
+          node-version: 18 
 
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1 
