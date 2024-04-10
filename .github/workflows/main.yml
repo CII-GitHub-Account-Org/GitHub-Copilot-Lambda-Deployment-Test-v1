@@ -3,7 +3,7 @@ name: Deploy to AWS Lambda
 on:
   push:
     branches:
-      - main # This workflow runs only on the main branch
+      - main
 jobs:
   Build:
     runs-on: windows-latest # This job runs on the same platform as the Unit_Test job
@@ -44,7 +44,7 @@ jobs:
       id-token: write # Needed to authenticate with GitHub Packages
       contents: read # Needed to read the contents of the repository
     environment:
-      name: development
+      name: development # This is the name of the environment you want to deploy to
 
     steps:
       - name: Checkout code
