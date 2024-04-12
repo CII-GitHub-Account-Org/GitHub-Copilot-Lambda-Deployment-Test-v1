@@ -3,7 +3,7 @@ name: Deploy to AWS Lambda
 on:
   push:
     branches:
-      - main # This workflow runs when code is pushed to the main branch
+      - main
 jobs:
   Build:
     runs-on: windows-latest # This job runs on the same platform as the Unit_Test job
@@ -39,7 +39,7 @@ jobs:
 
   Deploy_to_Development:
     needs: Unit_Test
-    runs-on: windows-latest # This job runs on the same platform as the Unit_Test job
+    runs-on: windows-latest
     permissions:
       id-token: write # Needed to authenticate with GitHub Packages
       contents: read # Needed to read the contents of the repository
