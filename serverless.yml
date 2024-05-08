@@ -5,7 +5,7 @@ provider:
   runtime: nodejs18.x # Node.js version to use for the Lambda function
   region: us-east-1 # AWS region where the Lambda function will be deployed
   deploymentBucket: 
-    name: callback-phonenumber-update-lex-test-v1
+    name: callback-phonenumber-update-lex-test-v1 # Deployment bucket name
 
 functions:
   hello:
