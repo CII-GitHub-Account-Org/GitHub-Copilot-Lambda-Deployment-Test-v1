@@ -3,7 +3,7 @@ name: Deploy to AWS Lambda
 on:
   push:
     branches:
-      - main
+      - main # This workflow runs on every push to the main branch
 jobs:
   Build:
     runs-on: windows-latest # This job runs on the same platform as the Unit_Test job
